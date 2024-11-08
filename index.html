@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Grammaire Sujets + Verbes</title>
+    <style>
+      /* Existing styles */
+      .title {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .title-l2 {
+        font-size: 28px;
+        font-weight: bold;
+      }
+      .title-l1 {
+        font-size: 18px;
+        color: gray;
+      }
+      .l2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 15px;
+      }
+      .l1 {
+        font-size: 18px;
+        color: gray;
+        margin-bottom: 15px;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      /* New styles for custom audio controls */
+      .audio-section {
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      .audio-player {
+        display: inline-block;
+        width: 100%;
+        max-width: 600px; /* Adjust as needed */
+      }
+      .controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .controls button,
+      .controls select {
+        background-color: #f0f0f0;
+        border: none;
+        margin: 0 5px;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .controls button:hover,
+      .controls select:hover {
+        background-color: #e0e0e0;
+      }
+      .progress {
+        width: 100%;
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+      }
+      .progress input[type="range"] {
+        flex-grow: 1;
+      }
+      .time {
+        font-size: 14px;
+        margin-left: 10px;
+        width: 70px;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Title Rows -->
+    <div class="title">
+      <div class="title-l2">Grammaire Sujets + Verbes</div>
+      <div class="title-l1">Gramàtica Subjecte + Verb</div>
+    </div>
+
+    <!-- Audio Players with Custom Controls -->
+    <div class="audio-section">
+      <div class="audio-player">
+        <audio id="audio1" src="L2.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio1')">« 5s</button>
+          <button onclick="playPause('audio1')" id="playPauseBtn1">Play</button>
+          <button onclick="skip('audio1')">5s »</button>
+          <select onchange="changeSpeed('audio1', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar1" value="0" step="0.1" min="0" max="100" onchange="seek('audio1', this.value)">
+          <div class="time" id="time1">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="audio-section">
+      <div class="audio-player">
+        <audio id="audio2" src="L2L1.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio2')">« 5s</button>
+          <button onclick="playPause('audio2')" id="playPauseBtn2">Play</button>
+          <button onclick="skip('audio2')">5s »</button>
+          <select onchange="changeSpeed('audio2', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar2" value="0" step="0.1" min="0" max="100" onchange="seek('audio2', this.value)">
+          <div class="time" id="time2">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Display Combined Data -->
+  
+    <div class="l2"></div>
+    <div class="l1"></div>
+    
+    <div class="l2">Les sujets, les pronoms et les verbes principaux au présent sont essentiels pour communiquer en français. Commençons par les sujets et les pronoms personnels. En français, les pronoms personnels sujets sont "je", "tu", "il", "elle", "on", "nous", "vous", "ils" et "elles". Ces pronoms représentent la personne qui fait l'action dans la phrase.</div>
+    <div class="l1">Els subjectes, els pronoms i els verbs principals en present són essencials per comunicar-se en francès. Comencem pels subjectes i els pronoms personals. En francès, els pronoms personals subjecte són "je", "tu", "il", "elle", "on", "nous", "vous", "ils" i "elles". Aquests pronoms representen la persona que realitza l'acció en la frase.</div>
+    
+    <div class="l2"></div>
+    <div class="l1"></div>
+    
+    <div class="l2">Le verbe "être" signifie "être" en anglais. Au présent, il se conjugue ainsi : je suis, tu es, il est, elle est, on est, nous sommes, vous êtes, ils sont, elles sont. Par exemple, à la forme affirmative, on peut dire "Je suis étudiant". À la forme négative, cela devient "Je ne suis pas professeur". Pour poser une question, on peut dire "Es-tu français ?".</div>
+    <div class="l1">El verb "être" significa "ser/estar" en català. En present, es conjuga així: je suis, tu es, il est, elle est, on est, nous sommes, vous êtes, ils sont, elles sont. Per exemple, en forma afirmativa, podem dir "Je suis étudiant" ("Jo sóc estudiant"). En forma negativa, es converteix en "Je ne suis pas professeur" ("Jo no sóc professor"). Per fer una pregunta, podem dir "Es-tu français ?" ("Ets francès?").</div>
+    
+    <div class="l2"></div>
+    <div class="l1"></div>
+    
+    <div class="l2">Le verbe "aller", qui signifie "aller", se conjugue au présent comme suit : je vais, tu vas, il va, elle va, on va, nous allons, vous allez, ils vont, elles vont. Par exemple, "Nous allons au parc" est une phrase affirmative. À la forme négative, on dira "Nous n'allons pas au cinéma". Pour poser une question, on peut dire "Vas-tu à l'école ?".</div>
+    <div class="l1">El verb "aller", que significa "anar", es conjuga en present de la següent manera: je vais, tu vas, il va, elle va, on va, nous allons, vous allez, ils vont, elles vont. Per exemple, "Nous allons au parc" ("Anem al parc") és una frase afirmativa. En forma negativa, direm "Nous n'allons pas au cinéma" ("No anem al cinema"). Per fer una pregunta, podem dir "Vas-tu à l'école ?" ("Vas a l'escola?").</div>
+    
+    <div class="l2"></div>
+    <div class="l1"></div>
+    
+    <div class="l2">Les verbes réguliers en "-er" suivent un schéma de conjugaison simple. Prenons le verbe "parler" qui signifie "parler". Il se conjugue : je parle, tu parles, il parle, elle parle, on parle, nous parlons, vous parlez, ils parlent, elles parlent. Un exemple à la forme affirmative serait "Elle parle anglais". À la forme négative, on dit "Elle ne parle pas espagnol". Pour poser une question, on demande "Parles-tu français ?".</div>
+    <div class="l1">Els verbs regulars en "-er" segueixen un esquema de conjugació senzill. Prenem el verb "parler", que significa "parlar". Es conjuga: je parle, tu parles, il parle, elle parle, on parle, nous parlons, vous parlez, ils parlent, elles parlent. Un exemple en forma afirmativa seria "Elle parle anglais" ("Ella parla anglès"). En forma negativa, diem "Elle ne parle pas espagnol" ("Ella no parla espanyol"). Per fer una pregunta, preguntem "Parles-tu français ?" ("Parles francès?").</div>
+    
+    <div class="l2"></div>
+    <div class="l1"></div>
+    
+    <div class="l2">Pour former la négation en français, on place "ne" avant le verbe et "pas" après le verbe. Par exemple, "Il est ici" devient "Il n'est pas ici" à la forme négative. Pour poser des questions, on peut inverser le sujet et le verbe, comme dans "Est-il professeur ?", ou utiliser "Est-ce que" devant la phrase : "Est-ce que tu aimes le chocolat ?".</div>
+    <div class="l1">Per formar la negació en francès, es col·loca "ne" abans del verb i "pas" després del verb. Per exemple, "Il est ici" ("Ell és aquí") es converteix en "Il n'est pas ici" ("Ell no és aquí") en forma negativa. Per fer preguntes, podem invertir el subjecte i el verb, com en "Est-il professeur ?" ("És ell professor?"), o utilitzar "Est-ce que" davant de la frase: "Est-ce que tu aimes le chocolat ?" ("T'agrada la xocolata?").</div>
+    
+    <div class="l2"></div>
+    <div class="l1"></div>
+    
+    <div class="l2">D'autres verbes réguliers utiles sont "aimer" (aimer) et "habiter" (vivre). Le verbe "aimer" se conjugue : j'aime, tu aimes, il aime, elle aime, on aime, nous aimons, vous aimez, ils aiment, elles aiment. Par exemple, "J'aime la musique" est une phrase affirmative. À la forme négative, on dit "Je n'aime pas le bruit". Pour poser une question, on demande "Aimes-tu le silence ?".</div>
+    <div class="l1">Altres verbs regulars útils són "aimer" (estimar, agradar) i "habiter" (viure). El verb "aimer" es conjuga: j'aime, tu aimes, il aime, elle aime, on aime, nous aimons, vous aimez, ils aiment, elles aiment. Per exemple, "J'aime la musique" ("M'agrada la música") és una frase afirmativa. En forma negativa, diem "Je n'aime pas le bruit" ("No m'agrada el soroll"). Per fer una pregunta, preguntem "Aimes-tu le silence ?" ("T'agrada el silenci?").</div>
+    
+    <div class="l2"></div>
+    <div class="l1"></div>
+    
+    <div class="l2">Le verbe "habiter" se conjugue : j'habite, tu habites, il habite, elle habite, on habite, nous habitons, vous habitez, ils habitent, elles habitent. Par exemple, "Nous habitons à Madrid" est une phrase affirmative. À la forme négative, on dit "Nous n'habitons pas à Paris". Pour poser une question, on demande "Habitez-vous en France ?".</div>
+    <div class="l1">El verb "habiter" es conjuga: j'habite, tu habites, il habite, elle habite, on habite, nous habitons, vous habitez, ils habitent, elles habitent. Per exemple, "Nous habitons à Madrid" ("Vivim a Madrid") és una frase afirmativa. En forma negativa, diem "Nous n'habitons pas à Paris" ("No vivim a París"). Per fer una pregunta, preguntem "Habitez-vous en France ?" ("Viviu a França?").</div>
+    
+    <div class="l2"></div>
+    <div class="l1"></div>
+    
+    <div class="l2">En résumé, comprendre les sujets, les pronoms personnels et la conjugaison des verbes au présent vous permet de construire des phrases simples en français. En pratiquant les formes affirmative, négative et interrogative, vous améliorerez votre capacité à communiquer efficacement. N'hésitez pas à créer vos propres phrases pour vous exercer.</div>
+    <div class="l1">En resum, comprendre els subjectes, els pronoms personals i la conjugació dels verbs en present us permet construir frases simples en francès. Practicant les formes afirmativa, negativa i interrogativa, millorareu la vostra capacitat per comunicar-vos eficaçment. No dubteu a crear les vostres pròpies frases per practicar.</div>
+    
+    <div class="l2"></div>
+    <div class="l1"></div>
+    
+    <div class="l2"></div>
+    <div class="l1"></div>
+    
+    <div class="l2"></div>
+    <div class="l1"></div>
+    
+    <div class="l2"></div>
+    <div class="l1"></div>
+    
+    <div class="l2"></div>
+    <div class="l1"></div>
+    
+    <div class="l2"></div>
+    <div class="l1"></div>
+    
+    <div class="l2"></div>
+    <div class="l1"></div>
+    
+    <div class="l2"></div>
+    <div class="l1"></div>
+    
+    <div class="l2"></div>
+    <div class="l1"></div>
+    
+    <div class="l2"></div>
+    <div class="l1">Forma de pregunta: "What would have happened if you hadn't moved abroad?" Preguntant sobre un passat que no va ocórrer.</div>
+    
+    <div class="l2"></div>
+    <div class="l1"></div>
+    
+    <div class="l2"></div>
+    <div class="l1">Finalment, el condicional mixt combina passat i present. Per exemple: "If I had saved money, I would be traveling now." La meva acció passada afecta la meva situació present.</div>
+    
+    <div class="l2"></div>
+    <div class="l1"></div>
+    
+    <div class="l2"></div>
+    <div class="l1">Exemple negatiu: "If he hadn't left his country, he wouldn't be bilingual now." Un esdeveniment passat que influeix en el present.</div>
+    
+    <div class="l2"></div>
+    <div class="l1"></div>
+    
+    <div class="l2"></div>
+    <div class="l1">Pregunta: "If you had accepted that job overseas, where would you be living now?" Barrejant decisions passades amb resultats presents.</div>
+    
+    <div class="l2"></div>
+    <div class="l1"></div>
+    
+    <div class="l2"></div>
+    <div class="l1">Així doncs, els condicionals ens ajuden a parlar de possibilitats, imaginacions i conseqüències relacionades amb la globalització i la migració. Força útils, oi? Feu-me saber si teniu alguna pregunta!</div>
+    
+    <script>
+      // Function to toggle play/pause
+      function playPause(audioId) {
+        var audio = document.getElementById(audioId);
+        var playPauseBtn = document.getElementById('playPauseBtn' + audioId.slice(-1));
+        if (audio.paused) {
+          audio.play();
+          playPauseBtn.textContent = 'Pause';
+        } else {
+          audio.pause();
+          playPauseBtn.textContent = 'Play';
+        }
+      }
+
+      // Function to rewind 5 seconds
+      function rewind(audioId) {
+        var audio = document.getElementById(audioId);
+        audio.currentTime = Math.max(0, audio.currentTime - 5);
+      }
+
+      // Function to skip forward 5 seconds
+      function skip(audioId) {
+        var audio = document.getElementById(audioId);
+        audio.currentTime = Math.min(audio.duration, audio.currentTime + 5);
+      }
+
+      // Function to change playback speed
+      function changeSpeed(audioId, speed) {
+        var audio = document.getElementById(audioId);
+        audio.playbackRate = parseFloat(speed);
+      }
+
+      // Function to update progress bar and time
+      function updateProgress(audioId, progressBarId, timeId) {
+        var audio = document.getElementById(audioId);
+        var progressBar = document.getElementById(progressBarId);
+        var timeDisplay = document.getElementById(timeId);
+        if (audio.duration) {
+          progressBar.value = (audio.currentTime / audio.duration) * 100;
+          timeDisplay.textContent = formatTime(audio.currentTime) + ' / ' + formatTime(audio.duration);
+        }
+      }
+
+      // Function to format time in mm:ss
+      function formatTime(seconds) {
+        var minutes = Math.floor(seconds / 60);
+        var seconds = Math.floor(seconds % 60);
+        if (seconds < 10) {
+          seconds = '0' + seconds;
+        }
+        return minutes + ':' + seconds;
+      }
+
+      // Function to seek in the audio
+      function seek(audioId, value) {
+        var audio = document.getElementById(audioId);
+        audio.currentTime = (value / 100) * audio.duration;
+      }
+
+      // Event listeners for updating progress bars and time
+      var audio1 = document.getElementById('audio1');
+      audio1.addEventListener('timeupdate', function() {
+        updateProgress('audio1', 'progressBar1', 'time1');
+      });
+      audio1.addEventListener('ended', function() {
+        document.getElementById('playPauseBtn1').textContent = 'Play';
+      });
+      audio1.addEventListener('loadedmetadata', function() {
+        updateProgress('audio1', 'progressBar1', 'time1');
+      });
+
+      var audio2 = document.getElementById('audio2');
+      audio2.addEventListener('timeupdate', function() {
+        updateProgress('audio2', 'progressBar2', 'time2');
+      });
+      audio2.addEventListener('ended', function() {
+        document.getElementById('playPauseBtn2').textContent = 'Play';
+      });
+      audio2.addEventListener('loadedmetadata', function() {
+        updateProgress('audio2', 'progressBar2', 'time2');
+      });
+    </script>
+  </body>
+</html>
+  
