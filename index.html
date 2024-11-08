@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Grammaire Sujets + Verbes</title>
     <style>
-      /* Existing styles */
+      /* Styles */
       .title {
         text-align: center;
         margin-bottom: 20px;
@@ -32,7 +32,6 @@
         font-family: Arial, sans-serif;
         padding: 20px;
       }
-      /* New styles for custom audio controls */
       .audio-section {
         margin-bottom: 30px;
         text-align: center;
@@ -40,7 +39,7 @@
       .audio-player {
         display: inline-block;
         width: 100%;
-        max-width: 600px; /* Adjust as needed */
+        max-width: 600px;
       }
       .controls {
         display: flex;
@@ -75,6 +74,9 @@
         width: 70px;
         text-align: right;
       }
+      .audio-container {
+        display: none; /* Hidden by default */
+      }
     </style>
   </head>
   <body>
@@ -84,10 +86,11 @@
       <div class="title-l1">Gramàtica Subjecte + Verb</div>
     </div>
 
-    <!-- Audio Players with Custom Controls -->
-    <div class="audio-section">
+    <!-- Audio Players -->
+
+    <div class="audio-section audio-container" id="audioContainer1">
       <div class="audio-player">
-        <audio id="audio1" src="L2.mp3"></audio>
+        <audio id="audio1" src="1.mp3"></audio>
         <div class="controls">
           <button onclick="rewind('audio1')">« 5s</button>
           <button onclick="playPause('audio1')" id="playPauseBtn1">Play</button>
@@ -107,10 +110,10 @@
         </div>
       </div>
     </div>
-
-    <div class="audio-section">
+    
+    <div class="audio-section audio-container" id="audioContainer2">
       <div class="audio-player">
-        <audio id="audio2" src="L2L1.mp3"></audio>
+        <audio id="audio2" src="2.mp3"></audio>
         <div class="controls">
           <button onclick="rewind('audio2')">« 5s</button>
           <button onclick="playPause('audio2')" id="playPauseBtn2">Play</button>
@@ -130,9 +133,191 @@
         </div>
       </div>
     </div>
-
-    <!-- Display Combined Data -->
-  
+    
+    <div class="audio-section audio-container" id="audioContainer3">
+      <div class="audio-player">
+        <audio id="audio3" src="3.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio3')">« 5s</button>
+          <button onclick="playPause('audio3')" id="playPauseBtn3">Play</button>
+          <button onclick="skip('audio3')">5s »</button>
+          <select onchange="changeSpeed('audio3', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar3" value="0" step="0.1" min="0" max="100" onchange="seek('audio3', this.value)">
+          <div class="time" id="time3">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="audio-section audio-container" id="audioContainer4">
+      <div class="audio-player">
+        <audio id="audio4" src="4.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio4')">« 5s</button>
+          <button onclick="playPause('audio4')" id="playPauseBtn4">Play</button>
+          <button onclick="skip('audio4')">5s »</button>
+          <select onchange="changeSpeed('audio4', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar4" value="0" step="0.1" min="0" max="100" onchange="seek('audio4', this.value)">
+          <div class="time" id="time4">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="audio-section audio-container" id="audioContainer5">
+      <div class="audio-player">
+        <audio id="audio5" src="5.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio5')">« 5s</button>
+          <button onclick="playPause('audio5')" id="playPauseBtn5">Play</button>
+          <button onclick="skip('audio5')">5s »</button>
+          <select onchange="changeSpeed('audio5', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar5" value="0" step="0.1" min="0" max="100" onchange="seek('audio5', this.value)">
+          <div class="time" id="time5">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="audio-section audio-container" id="audioContainer6">
+      <div class="audio-player">
+        <audio id="audio6" src="6.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio6')">« 5s</button>
+          <button onclick="playPause('audio6')" id="playPauseBtn6">Play</button>
+          <button onclick="skip('audio6')">5s »</button>
+          <select onchange="changeSpeed('audio6', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar6" value="0" step="0.1" min="0" max="100" onchange="seek('audio6', this.value)">
+          <div class="time" id="time6">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="audio-section audio-container" id="audioContainer7">
+      <div class="audio-player">
+        <audio id="audio7" src="7.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio7')">« 5s</button>
+          <button onclick="playPause('audio7')" id="playPauseBtn7">Play</button>
+          <button onclick="skip('audio7')">5s »</button>
+          <select onchange="changeSpeed('audio7', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar7" value="0" step="0.1" min="0" max="100" onchange="seek('audio7', this.value)">
+          <div class="time" id="time7">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="audio-section audio-container" id="audioContainer8">
+      <div class="audio-player">
+        <audio id="audio8" src="8.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio8')">« 5s</button>
+          <button onclick="playPause('audio8')" id="playPauseBtn8">Play</button>
+          <button onclick="skip('audio8')">5s »</button>
+          <select onchange="changeSpeed('audio8', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar8" value="0" step="0.1" min="0" max="100" onchange="seek('audio8', this.value)">
+          <div class="time" id="time8">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="audio-section audio-container" id="audioContainer9">
+      <div class="audio-player">
+        <audio id="audio9" src="9.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio9')">« 5s</button>
+          <button onclick="playPause('audio9')" id="playPauseBtn9">Play</button>
+          <button onclick="skip('audio9')">5s »</button>
+          <select onchange="changeSpeed('audio9', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar9" value="0" step="0.1" min="0" max="100" onchange="seek('audio9', this.value)">
+          <div class="time" id="time9">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="audio-section audio-container" id="audioContainer10">
+      <div class="audio-player">
+        <audio id="audio10" src="10.mp3"></audio>
+        <div class="controls">
+          <button onclick="rewind('audio10')">« 5s</button>
+          <button onclick="playPause('audio10')" id="playPauseBtn10">Play</button>
+          <button onclick="skip('audio10')">5s »</button>
+          <select onchange="changeSpeed('audio10', this.value)">
+            <option value="0.5">0.5x</option>
+            <option value="0.75">0.75x</option>
+            <option value="0.85">0.85x</option>
+            <option value="0.90">0.90x</option>
+            <option value="0.95">0.95x</option>
+            <option value="1" selected>1x</option>
+          </select>
+        </div>
+        <div class="progress">
+          <input type="range" id="progressBar10" value="0" step="0.1" min="0" max="100" onchange="seek('audio10', this.value)">
+          <div class="time" id="time10">0:00 / 0:00</div>
+        </div>
+      </div>
+    </div>
+    
     <div class="l2"></div>
     <div class="l1"></div>
     
@@ -181,65 +366,11 @@
     <div class="l2">En résumé, comprendre les sujets, les pronoms personnels et la conjugaison des verbes au présent vous permet de construire des phrases simples en français. En pratiquant les formes affirmative, négative et interrogative, vous améliorerez votre capacité à communiquer efficacement. N'hésitez pas à créer vos propres phrases pour vous exercer.</div>
     <div class="l1">En resum, comprendre els subjectes, els pronoms personals i la conjugació dels verbs en present us permet construir frases simples en francès. Practicant les formes afirmativa, negativa i interrogativa, millorareu la vostra capacitat per comunicar-vos eficaçment. No dubteu a crear les vostres pròpies frases per practicar.</div>
     
-    <div class="l2"></div>
-    <div class="l1"></div>
-    
-    <div class="l2"></div>
-    <div class="l1"></div>
-    
-    <div class="l2"></div>
-    <div class="l1"></div>
-    
-    <div class="l2"></div>
-    <div class="l1"></div>
-    
-    <div class="l2"></div>
-    <div class="l1"></div>
-    
-    <div class="l2"></div>
-    <div class="l1"></div>
-    
-    <div class="l2"></div>
-    <div class="l1"></div>
-    
-    <div class="l2"></div>
-    <div class="l1"></div>
-    
-    <div class="l2"></div>
-    <div class="l1"></div>
-    
-    <div class="l2"></div>
-    <div class="l1">Forma de pregunta: "What would have happened if you hadn't moved abroad?" Preguntant sobre un passat que no va ocórrer.</div>
-    
-    <div class="l2"></div>
-    <div class="l1"></div>
-    
-    <div class="l2"></div>
-    <div class="l1">Finalment, el condicional mixt combina passat i present. Per exemple: "If I had saved money, I would be traveling now." La meva acció passada afecta la meva situació present.</div>
-    
-    <div class="l2"></div>
-    <div class="l1"></div>
-    
-    <div class="l2"></div>
-    <div class="l1">Exemple negatiu: "If he hadn't left his country, he wouldn't be bilingual now." Un esdeveniment passat que influeix en el present.</div>
-    
-    <div class="l2"></div>
-    <div class="l1"></div>
-    
-    <div class="l2"></div>
-    <div class="l1">Pregunta: "If you had accepted that job overseas, where would you be living now?" Barrejant decisions passades amb resultats presents.</div>
-    
-    <div class="l2"></div>
-    <div class="l1"></div>
-    
-    <div class="l2"></div>
-    <div class="l1">Així doncs, els condicionals ens ajuden a parlar de possibilitats, imaginacions i conseqüències relacionades amb la globalització i la migració. Força útils, oi? Feu-me saber si teniu alguna pregunta!</div>
-    
     <script>
       // Function to toggle play/pause
       function playPause(audioId) {
         var audio = document.getElementById(audioId);
-        var playPauseBtn = document.getElementById('playPauseBtn' + audioId.slice(-1));
+        var playPauseBtn = document.getElementById('playPauseBtn' + audioId.slice(5));
         if (audio.paused) {
           audio.play();
           playPauseBtn.textContent = 'Pause';
@@ -294,28 +425,36 @@
         audio.currentTime = (value / 100) * audio.duration;
       }
 
-      // Event listeners for updating progress bars and time
-      var audio1 = document.getElementById('audio1');
-      audio1.addEventListener('timeupdate', function() {
-        updateProgress('audio1', 'progressBar1', 'time1');
-      });
-      audio1.addEventListener('ended', function() {
-        document.getElementById('playPauseBtn1').textContent = 'Play';
-      });
-      audio1.addEventListener('loadedmetadata', function() {
-        updateProgress('audio1', 'progressBar1', 'time1');
-      });
+      // Initialize audio players
+      var maxMp3Files = 10;
+      for (var i = 1; i <= maxMp3Files; i++) {
+        (function(i) {
+          var audio = document.getElementById('audio' + i);
+          var audioContainer = document.getElementById('audioContainer' + i);
 
-      var audio2 = document.getElementById('audio2');
-      audio2.addEventListener('timeupdate', function() {
-        updateProgress('audio2', 'progressBar2', 'time2');
-      });
-      audio2.addEventListener('ended', function() {
-        document.getElementById('playPauseBtn2').textContent = 'Play';
-      });
-      audio2.addEventListener('loadedmetadata', function() {
-        updateProgress('audio2', 'progressBar2', 'time2');
-      });
+          // Check if the audio file exists
+          audio.addEventListener('loadedmetadata', function() {
+            audioContainer.style.display = 'block'; // Show the audio player
+            updateProgress('audio' + i, 'progressBar' + i, 'time' + i);
+          });
+
+          audio.addEventListener('error', function() {
+            audioContainer.style.display = 'none'; // Hide the audio player if the file doesn't exist
+          });
+
+          // Other event listeners
+          audio.addEventListener('timeupdate', function() {
+            updateProgress('audio' + i, 'progressBar' + i, 'time' + i);
+          });
+
+          audio.addEventListener('ended', function() {
+            document.getElementById('playPauseBtn' + i).textContent = 'Play';
+          });
+
+          // Attempt to load the audio file
+          audio.load();
+        })(i);
+      }
     </script>
   </body>
 </html>
